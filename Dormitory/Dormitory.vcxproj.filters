@@ -91,4 +91,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="database.db">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
 </Project>
