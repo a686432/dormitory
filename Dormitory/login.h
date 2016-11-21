@@ -4,29 +4,30 @@
 #include <QDialog>
 #include "ui_login.h"
 
+
 namespace Ui {
-	class login;
+	class Login;
 }
 
-class login : public QDialog
+class Login : public QDialog
 {
 	Q_OBJECT
 
 public:
-	login(QDialog *parent = 0);
-	~login();
+	Login(QDialog *parent = 0);
+	~Login();
 
 private:
-	Ui::login *ui;
+	Ui::Login ui;
 
 protected:
 	void changeEvent(QEvent *e);
 
-private slots:
-	void on_pushButton_2_clicked();
-	void on_pushButton_clicked();
+	private slots:
+	void on_ok_clicked();
+	void on_cancel_clicked();
 };
 
-};
+
 
 #endif // LOGIN_H

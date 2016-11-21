@@ -59,6 +59,9 @@
     <ClCompile Include="GeneratedFiles\Release\moc_login.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
+    <ClCompile Include="SQL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="dormitory.h">

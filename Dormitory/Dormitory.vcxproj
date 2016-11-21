@@ -167,6 +167,7 @@
     </ClCompile>
     <ClCompile Include="login.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="SQL.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="dormitory.h">
