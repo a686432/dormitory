@@ -16,14 +16,14 @@ class Login : public QDialog
 public:
 	Login(QDialog *parent = 0);
 	~Login();
-
+	
 private:
 	Ui::Login ui;
 
 protected:
 	void changeEvent(QEvent *e);
 
-	private slots:
+private slots:
 	void on_ok_clicked();
 	void on_cancel_clicked();
 };

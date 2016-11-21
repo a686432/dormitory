@@ -87,5 +87,8 @@
     <ClInclude Include="GeneratedFiles\ui_login.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
+    <ClInclude Include="sqlite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

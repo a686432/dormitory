@@ -212,6 +212,7 @@
   <ItemGroup>
     <ClInclude Include="GeneratedFiles\ui_dormitory.h" />
     <ClInclude Include="GeneratedFiles\ui_login.h" />
+    <ClInclude Include="sqlite.h" />
     <CustomBuild Include="login.h">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing login.h...</Message>

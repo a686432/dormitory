@@ -4,6 +4,7 @@
 #include <QtWidgets/QMainWindow>
 #include "ui_dormitory.h"
 
+
 class Dormitory : public QMainWindow
 {
 	Q_OBJECT
@@ -11,9 +12,17 @@ class Dormitory : public QMainWindow
 public:
 	Dormitory(QWidget *parent = 0);
 	~Dormitory();
+	static QString  admin;
 
 private:
 	Ui::DormitoryClass ui;
+
+
+
+private slots:
+       void on_search_clicked();
+
+
 };
 
 #endif // DORMITORY_H

@@ -1,10 +1,14 @@
 #include "login.h"
 #include "QMessageBox.h"
 #include "QTextCodec.h"
+#include "sqlite.h"
+#include "dormitory.h"
+
 Login::Login(QDialog *parent)
 	: QDialog(parent)
 {
 	ui.setupUi(this);
+	Init_sqlite();
 }
 
 Login::~Login()
@@ -27,9 +31,12 @@ void Login::changeEvent(QEvent *e)
 
 void Login::on_ok_clicked()
 {
-	if (ui.user->text().trimmed() == tr("admin") &&
-		ui.password->text().trimmed() == tr("admin"))
+	Dormitory::admin = ui.user->text();
+	QString password = ui.password->text();
+	QString pws = sqlquery("select password from student where id=" + Dormitory::admin);
+	if (pws == password)
 	{
+		Dormitory::admin = ui.user->text();
 		accept();
 	}
 	else

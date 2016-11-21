@@ -33,7 +33,7 @@ class Ui_DormitoryClass
 public:
     QWidget *centralWidget;
     QLabel *label;
-    QPushButton *pushButton;
+    QPushButton *search;
     QLabel *label_2;
     QLabel *label_3;
     QLineEdit *lineEdit_2;
@@ -44,6 +44,8 @@ public:
     QDateEdit *dateEdit;
     QDateEdit *dateEdit_2;
     QLabel *label_4;
+    QLabel *label_5;
+    QLineEdit *lineEdit_4;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -58,9 +60,9 @@ public:
         label = new QLabel(centralWidget);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(40, 150, 71, 21));
-        pushButton = new QPushButton(centralWidget);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(450, 20, 75, 23));
+        search = new QPushButton(centralWidget);
+        search->setObjectName(QStringLiteral("search"));
+        search->setGeometry(QRect(450, 20, 75, 23));
         label_2 = new QLabel(centralWidget);
         label_2->setObjectName(QStringLiteral("label_2"));
         label_2->setGeometry(QRect(40, 200, 54, 12));
@@ -97,6 +99,12 @@ public:
         label_4 = new QLabel(centralWidget);
         label_4->setObjectName(QStringLiteral("label_4"));
         label_4->setGeometry(QRect(210, 20, 54, 16));
+        label_5 = new QLabel(centralWidget);
+        label_5->setObjectName(QStringLiteral("label_5"));
+        label_5->setGeometry(QRect(40, 300, 54, 12));
+        lineEdit_4 = new QLineEdit(centralWidget);
+        lineEdit_4->setObjectName(QStringLiteral("lineEdit_4"));
+        lineEdit_4->setGeometry(QRect(100, 300, 113, 20));
         DormitoryClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(DormitoryClass);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -110,6 +118,7 @@ public:
         DormitoryClass->setStatusBar(statusBar);
 
         retranslateUi(DormitoryClass);
+        QObject::connect(search, SIGNAL(clicked()), DormitoryClass, SLOT(on_search_clicked()));
 
         QMetaObject::connectSlotsByName(DormitoryClass);
     } // setupUi
@@ -118,10 +127,11 @@ public:
     {
         DormitoryClass->setWindowTitle(QApplication::translate("DormitoryClass", "Dormitory", 0));
         label->setText(QApplication::translate("DormitoryClass", "\345\255\246\345\217\267", 0));
-        pushButton->setText(QApplication::translate("DormitoryClass", "\346\237\245\350\257\242", 0));
+        search->setText(QApplication::translate("DormitoryClass", "\346\237\245\350\257\242", 0));
         label_2->setText(QApplication::translate("DormitoryClass", "\345\247\223\345\220\215", 0));
         label_3->setText(QApplication::translate("DormitoryClass", "\346\245\274\345\217\267", 0));
         label_4->setText(QApplication::translate("DormitoryClass", "\350\207\263", 0));
+        label_5->setText(QApplication::translate("DormitoryClass", "\346\210\277\351\227\264\345\217\267", 0));
     } // retranslateUi
 
 };
