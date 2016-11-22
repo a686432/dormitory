@@ -16,7 +16,7 @@ class Login : public QDialog
 public:
 	Login(QDialog *parent = 0);
 	~Login();
-	
+	static QString  admin;
 private:
 	Ui::Login ui;
 

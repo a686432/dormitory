@@ -62,6 +62,15 @@
     <ClCompile Include="SQL.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="adiministrate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_adiministrate.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_adiministrate.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="dormitory.h">
@@ -79,6 +88,12 @@
     <CustomBuild Include="login.ui">
       <Filter>Form Files</Filter>
     </CustomBuild>
+    <CustomBuild Include="adiministrate.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="adiministrate.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GeneratedFiles\ui_dormitory.h">
@@ -90,10 +105,13 @@
     <ClInclude Include="sqlite.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_adiministrate.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="database.db">
-      <Filter>Source Files</Filter>
+      <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
 </Project>

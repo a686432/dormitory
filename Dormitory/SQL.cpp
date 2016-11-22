@@ -3,15 +3,18 @@
 
 void Init_sqlite()
 {
-	QSqlDatabase database = QSqlDatabase::addDatabase("QSQLITE");
-	database.setDatabaseName("database.db");
-	database.setUserName("root");
-	database.setPassword("123456");
+	QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
+	db.setHostName("123.207.165.95");
+	db.setPort(3306);
+	db.setDatabaseName("abc");
+	db.setUserName("root");
+	db.setPassword("IOTkeshe2016");
+
 
 	//打开数据库
-	if (!database.open())
+	if (!db.open())
 	{
-		qDebug() << database.lastError();
+		qDebug() << db.lastError();
 		qFatal("failed to connect.");
 	}
 	else
@@ -46,7 +49,18 @@ QString sqlquery(QString s)
 	
 }
 
-
+void Sqlinsert(QString s,QSqlQuery sql_query)
+{
+	
+	if (!sql_query.exec())
+	{
+		qDebug() << sql_query.lastError();
+	}
+	else
+	{
+		qDebug() << "inserted!";
+	}
+}
 /*void Sqlquery(QSqlDatabase database,int mode)
 {
 	QSqlQuery sql_query;
