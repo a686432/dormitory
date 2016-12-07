@@ -21,7 +21,7 @@ QString clear_sql = "delete from student";
 #define UPDATE 4
 
 void Init_sqlite();
-void Sqlinsert(QString s, QSqlQuery sql_query);
+bool Sqlinsert(QString s, QSqlQuery sql_query);
 QString sqlquery(QString s);
 
 #endif

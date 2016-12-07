@@ -46,6 +46,12 @@ public:
     QLabel *label_4;
     QLabel *label_5;
     QLineEdit *lineEdit_4;
+    QFrame *line_2;
+    QLabel *label_6;
+    QLabel *label_7;
+    QLineEdit *lineEdit_5;
+    QLineEdit *lineEdit_6;
+    QPushButton *pushButton;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -54,7 +60,7 @@ public:
     {
         if (DormitoryClass->objectName().isEmpty())
             DormitoryClass->setObjectName(QStringLiteral("DormitoryClass"));
-        DormitoryClass->resize(600, 400);
+        DormitoryClass->resize(644, 541);
         centralWidget = new QWidget(DormitoryClass);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         label = new QLabel(centralWidget);
@@ -81,12 +87,12 @@ public:
         lineEdit_3->setGeometry(QRect(100, 250, 113, 20));
         line = new QFrame(centralWidget);
         line->setObjectName(QStringLiteral("line"));
-        line->setGeometry(QRect(0, 60, 601, 20));
+        line->setGeometry(QRect(0, 70, 601, 20));
         line->setFrameShape(QFrame::HLine);
         line->setFrameShadow(QFrame::Sunken);
         listWidget = new QListWidget(centralWidget);
         listWidget->setObjectName(QStringLiteral("listWidget"));
-        listWidget->setGeometry(QRect(270, 130, 256, 192));
+        listWidget->setGeometry(QRect(300, 130, 291, 221));
         lineEdit = new QLineEdit(centralWidget);
         lineEdit->setObjectName(QStringLiteral("lineEdit"));
         lineEdit->setGeometry(QRect(100, 150, 113, 20));
@@ -105,10 +111,30 @@ public:
         lineEdit_4 = new QLineEdit(centralWidget);
         lineEdit_4->setObjectName(QStringLiteral("lineEdit_4"));
         lineEdit_4->setGeometry(QRect(100, 300, 113, 20));
+        line_2 = new QFrame(centralWidget);
+        line_2->setObjectName(QStringLiteral("line_2"));
+        line_2->setGeometry(QRect(10, 380, 631, 16));
+        line_2->setFrameShape(QFrame::HLine);
+        line_2->setFrameShadow(QFrame::Sunken);
+        label_6 = new QLabel(centralWidget);
+        label_6->setObjectName(QStringLiteral("label_6"));
+        label_6->setGeometry(QRect(40, 430, 54, 12));
+        label_7 = new QLabel(centralWidget);
+        label_7->setObjectName(QStringLiteral("label_7"));
+        label_7->setGeometry(QRect(250, 430, 54, 12));
+        lineEdit_5 = new QLineEdit(centralWidget);
+        lineEdit_5->setObjectName(QStringLiteral("lineEdit_5"));
+        lineEdit_5->setGeometry(QRect(110, 420, 113, 20));
+        lineEdit_6 = new QLineEdit(centralWidget);
+        lineEdit_6->setObjectName(QStringLiteral("lineEdit_6"));
+        lineEdit_6->setGeometry(QRect(310, 420, 113, 20));
+        pushButton = new QPushButton(centralWidget);
+        pushButton->setObjectName(QStringLiteral("pushButton"));
+        pushButton->setGeometry(QRect(510, 420, 75, 23));
         DormitoryClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(DormitoryClass);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 600, 23));
+        menuBar->setGeometry(QRect(0, 0, 644, 23));
         DormitoryClass->setMenuBar(menuBar);
         mainToolBar = new QToolBar(DormitoryClass);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -132,6 +158,9 @@ public:
         label_3->setText(QApplication::translate("DormitoryClass", "\346\245\274\345\217\267", 0));
         label_4->setText(QApplication::translate("DormitoryClass", "\350\207\263", 0));
         label_5->setText(QApplication::translate("DormitoryClass", "\346\210\277\351\227\264\345\217\267", 0));
+        label_6->setText(QApplication::translate("DormitoryClass", "\346\227\247\345\257\206\347\240\201", 0));
+        label_7->setText(QApplication::translate("DormitoryClass", "\346\226\260\345\257\206\347\240\201", 0));
+        pushButton->setText(QApplication::translate("DormitoryClass", "\344\277\256\346\224\271\345\257\206\347\240\201", 0));
     } // retranslateUi
 
 };

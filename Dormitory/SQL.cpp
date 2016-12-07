@@ -49,16 +49,18 @@ QString sqlquery(QString s)
 	
 }
 
-void Sqlinsert(QString s,QSqlQuery sql_query)
+bool Sqlinsert(QString s,QSqlQuery sql_query)
 {
 	
 	if (!sql_query.exec())
 	{
 		qDebug() << sql_query.lastError();
+		return false;
 	}
 	else
 	{
 		qDebug() << "inserted!";
+		return true;
 	}
 }
 /*void Sqlquery(QSqlDatabase database,int mode)

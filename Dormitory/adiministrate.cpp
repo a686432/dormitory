@@ -1,6 +1,7 @@
 #include "adiministrate.h"
 #include "login.h"
 #include "sqlite.h"
+#include "QMessageBox.h"
 
 adiministrate::adiministrate(QWidget *parent)
 	: QWidget(parent)
@@ -27,5 +28,19 @@ void adiministrate::slot1()
 	sql_query.bindValue(2, name);
 	sql_query.bindValue(3, building.toInt());
 	sql_query.bindValue(4, room.toInt());
-	Sqlinsert("insert into student (id, password, name, building, room) values (?, ?, ?, ?, ?)",sql_query);
+	if (Sqlinsert("insert into student (id, password, name, building, room) values (?, ?, ?, ?, ?)", sql_query))
+	{
+		QMessageBox::information(this, tr("info"), tr("something have been done!"), QMessageBox::Yes);
+		close();
+	}
+	else
+	{
+		QMessageBox::warning(this, tr("warning"), tr("something wrong, please rewrite again!"), QMessageBox::Yes);
+		this->ui.user->clear();
+		this->ui.password->clear();
+		this->ui.building->clear();
+		this->ui.card->clear();
+		this->ui.name->clear();
+		this->ui.user->setFocus();
+	}
 }

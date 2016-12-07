@@ -34,7 +34,7 @@ void Login::on_ok_clicked()
 	Login::admin = ui.user->text();
 	QString password = ui.password->text();
 	QString pws = sqlquery("select password from student where id=" + Login::admin);
-	if (pws == password ||(admin=="admin" && password=="admin"))
+	if (pws == password && pws != NULL || admin == "admin" && password == "admin")
 	{
 		Login::admin = ui.user->text();
 		accept();
@@ -42,7 +42,7 @@ void Login::on_ok_clicked()
 	else
 	{ 
 		QTextCodec::setCodecForLocale(QTextCodec::codecForName("GBK"));
-		QMessageBox::warning(this, tr("警告"), tr("用户名或密码错误!"), QMessageBox::Yes);
+		QMessageBox::warning(this, tr("warning"), tr("Incorrect username or password!"), QMessageBox::Yes);
 		this->ui.user->clear();
 		this->ui.password->clear();
 		this->ui.user->setFocus();
